@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import Rating from "../components/Rating";
 
 const Product = ({ match }) => {
-
   const [product, setProduct] = useState([]);
 
   useEffect(() => {
@@ -14,8 +13,8 @@ const Product = ({ match }) => {
       setProduct(data);
     };
     fetchProducts();
-  }, []);
-  
+  }, [match]);
+
   return (
     <>
       <Link className="btn btn-dark my-3" to="/">
